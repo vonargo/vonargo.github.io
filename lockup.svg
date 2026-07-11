@@ -1,31 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 186" width="320" height="372">
-  <!-- vonArgo lockup: egg; asymmetric lemniscate fracture (? whose loop re-enters) + heavy tail + shard dot;
-       circuit-trace branches with via pads; cold-plate depression line -->
+  <!-- vonArgo lockup v4: egg; open irregular ?-bowl whose two ends CROSS below (the loop never closes);
+       left end continues as the ! tail to the shard dot; right end terminates in a via.
+       Circuit-trace branches with via pads. Cold-plate depression line. -->
   <g transform="translate(20,10)">
     <path d="M60 6 C 88 6, 112 48, 112 92 C 112 126, 89 144, 60 144 C 31 144, 8 126, 8 92 C 8 48, 32 6, 60 6 Z"
           fill="none" stroke="#2e3c47" stroke-width="4"/>
     <g stroke="#b4622d" fill="none" stroke-linecap="square" stroke-linejoin="miter">
-      <!-- main ? bowl -->
-      <path d="M54 58 L46 38 L60 28 L76 33 L84 47 L79 61 L66 68 L54 58" stroke-width="4.5"/>
-      <!-- re-entry lobe -->
-      <path d="M54 58 L42 62 L40 72 L50 74 L58 66" stroke-width="4.5"/>
-      <!-- tail: the ! stroke, heavier -->
-      <path d="M58 66 L61 80 L60 94" stroke-width="6.5"/>
-      <!-- circuit-trace branches: orthogonal runs -->
-      <path d="M46 38 L46 31 L39 31" stroke-width="2.5"/>
-      <path d="M76 33 L76 25 L83 25" stroke-width="2.5"/>
-      <path d="M84 47 L93 47 L93 54" stroke-width="2.5"/>
-      <path d="M79 61 L88 61 L88 69" stroke-width="2.5"/>
-      <path d="M40 72 L32 72 L32 80" stroke-width="2.5"/>
-      <path d="M61 80 L70 80 L70 87" stroke-width="2.5"/>
+      <!-- bowl: irregular, open at the bottom; left end at (46,64), right end at (66,70) -->
+      <path d="M46 64 L39 49 L47 34 L62 28 L78 35 L83 50 L76 63 L66 70" stroke-width="4.5"/>
+      <!-- right leg: from bowl end, down-left, short, ends in via -->
+      <path d="M66 70 L54 82 L50 89" stroke-width="4.5"/>
+      <!-- left leg: from bowl start, down-right CROSSING the right leg (~57,76), becoming the tail -->
+      <path d="M46 64 L61 79 L60 94" stroke-width="5.5"/>
+      <!-- circuit-trace branches -->
+      <path d="M47 34 L47 26 L40 26" stroke-width="2.5"/>
+      <path d="M78 35 L84 28" stroke-width="2.5"/>
+      <path d="M83 50 L92 50 L92 58" stroke-width="2.5"/>
+      <path d="M39 49 L30 49 L30 42" stroke-width="2.5"/>
     </g>
-    <!-- via pads at trace ends -->
     <g fill="#b4622d">
-      <circle cx="39" cy="31" r="2.6"/><circle cx="83" cy="25" r="2.6"/>
-      <circle cx="93" cy="54" r="2.6"/><circle cx="88" cy="69" r="2.6"/>
-      <circle cx="32" cy="80" r="2.6"/><circle cx="70" cy="87" r="2.6"/>
+      <circle cx="50" cy="89" r="3"/>
+      <circle cx="40" cy="26" r="2.6"/><circle cx="84" cy="28" r="2.6"/>
+      <circle cx="92" cy="58" r="2.6"/><circle cx="30" cy="42" r="2.6"/>
     </g>
-    <!-- the dot: shard-hole, slightly heavier -->
     <g stroke="#b4622d" fill="none" stroke-width="5"><circle cx="60" cy="113" r="7.5"/></g>
     <g stroke="#b4622d" fill="none" stroke-width="2.2">
       <path d="M60 105 L60 100"/><path d="M67 109 L72 105"/><path d="M53 109 L48 105"/>
