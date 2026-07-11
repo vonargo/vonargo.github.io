@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vonargo — inference appliances from datacenter-grade hardware</title>
 <meta name="description" content="Vonargo re-engineers decommissioned datacenter GPU systems into quiet, desk-side inference appliances. In prototype — first units 2026.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='2' width='28' height='28' rx='3' fill='%232e3c47'/%3E%3Ctext x='16' y='25' font-size='24' font-weight='bold' text-anchor='middle' fill='%23c97b45' font-family='Georgia,serif'%3E%E2%80%BD%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 150'%3E%3Cpath d='M60 6 C 88 6, 112 48, 112 92 C 112 126, 89 144, 60 144 C 31 144, 8 126, 8 92 C 8 48, 32 6, 60 6 Z' fill='%232e3c47'/%3E%3Cg stroke='%23c97b45' fill='none' stroke-width='9' stroke-linecap='square'%3E%3Cpath d='M42 44 L50 34 L62 30 L74 34 L81 44 L82 56 L76 66 L67 73 L61 82 L60 94'/%3E%3C/g%3E%3Ccircle cx='60' cy='115' r='9' fill='%23c97b45'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@ main{max-width:880px;margin:0 auto;padding:calc(var(--frame) + 4vw) 2rem 0}
 /* ── nameplate ───────────────────────────────────────────── */
 .nameplate{background:var(--slate);color:var(--slate-ink);
   border-radius:3px;padding:3.2rem 3rem 2.8rem;position:relative;overflow:hidden}
-.nameplate .mark{position:absolute;top:2.1rem;right:3rem;width:44px;height:34px}
+.nameplate .mark{position:absolute;top:1.8rem;right:3rem;width:44px;height:55px}
 .wordmark{font-family:var(--display);font-weight:850;font-stretch:118%;
   font-size:clamp(2.5rem,7vw,4.1rem);letter-spacing:0.035em;line-height:1;
   margin:0;color:#fff}
@@ -154,9 +154,23 @@ footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
 
 <main>
   <header class="nameplate">
-    <svg class="mark" viewBox="0 0 44 34" aria-hidden="true">
-      <rect x="1" y="1" width="42" height="32" rx="2" fill="none" stroke="#8fa0ab" stroke-width="1"/>
-      <text x="22" y="26" font-size="24" font-weight="700" text-anchor="middle" fill="#c97b45" font-family="Georgia,'DejaVu Serif',serif">&#8253;</text>
+    <svg class="mark" viewBox="0 0 120 150" aria-hidden="true">
+      <path d="M60 6 C 88 6, 112 48, 112 92 C 112 126, 89 144, 60 144 C 31 144, 8 126, 8 92 C 8 48, 32 6, 60 6 Z" fill="none" stroke="#8fa0ab" stroke-width="4"/>
+      <g stroke="#c97b45" fill="none" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter">
+        <path d="M42 44 L50 34 L62 30 L74 34 L81 44 L82 56 L76 66 L67 73 L61 82 L60 94"/>
+        <path d="M50 34 L45 26" stroke-width="2.5"/>
+        <path d="M74 34 L80 26" stroke-width="2.5"/>
+        <path d="M82 56 L91 58" stroke-width="2.5"/>
+        <path d="M76 66 L84 72" stroke-width="2.5"/>
+        <path d="M61 82 L53 86" stroke-width="2.5"/>
+        <path d="M42 44 L33 43" stroke-width="2.5"/>
+      </g>
+      <path d="M62 30 L60 94" stroke="#c97b45" stroke-width="2.5" fill="none" stroke-linecap="square"/>
+      <g stroke="#c97b45" fill="none" stroke-width="4"><circle cx="60" cy="113" r="7"/></g>
+      <g stroke="#c97b45" fill="none" stroke-width="2">
+        <path d="M60 106 L60 101"/><path d="M66 109 L71 105"/><path d="M54 109 L49 105"/>
+        <path d="M60 120 L60 126"/><path d="M66 117 L71 121"/>
+      </g>
     </svg>
     <h1 class="wordmark">V<span class="o">O</span>NARGO</h1>
     <p class="thesis">Turnkey inference appliances, built from datacenter-grade GPU hardware.</p>

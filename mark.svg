@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 150" width="240" height="300">
+  <!-- Vonargo mark: egg with interrobang-shaped crack (EAI lineage, steel & copper register) -->
+  <path d="M60 6
+           C 88 6, 112 48, 112 92
+           C 112 126, 89 144, 60 144
+           C 31 144, 8 126, 8 92
+           C 8 48, 32 6, 60 6 Z"
+        fill="none" stroke="#2e3c47" stroke-width="4"/>
+  <!-- crack: copper interrobang. question-curve as jagged fracture -->
+  <g stroke="#b4622d" fill="none" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M42 44 L50 34 L62 30 L74 34 L81 44 L82 56 L76 66 L67 73 L61 82 L60 94"/>
+    <!-- fracture branches -->
+    <path d="M50 34 L45 26" stroke-width="2.5"/>
+    <path d="M74 34 L80 26" stroke-width="2.5"/>
+    <path d="M82 56 L91 58" stroke-width="2.5"/>
+    <path d="M76 66 L84 72" stroke-width="2.5"/>
+    <path d="M61 82 L53 86" stroke-width="2.5"/>
+    <path d="M42 44 L33 43" stroke-width="2.5"/>
+  </g>
+  <!-- the exclamation stroke: straight hairline fracture through the curve -->
+  <path d="M62 30 L60 94" stroke="#b4622d" stroke-width="2.5" fill="none" stroke-linecap="square"/>
+  <!-- the dot: a shard-hole with radiating cracks -->
+  <g stroke="#b4622d" fill="none" stroke-width="4">
+    <circle cx="60" cy="113" r="7"/>
+  </g>
+  <g stroke="#b4622d" fill="none" stroke-width="2">
+    <path d="M60 106 L60 101"/>
+    <path d="M66 109 L71 105"/>
+    <path d="M54 109 L49 105"/>
+    <path d="M60 120 L60 126"/>
+    <path d="M66 117 L71 121"/>
+  </g>
+</svg>
