@@ -1,34 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 186" width="320" height="372">
-  <!-- vonArgo lockup v5: egg; fracture-bulb: open ?-bowl (glass), thin crossed filament legs (infinity),
-       bold ! bar (bulb base / exclamation), shard dot. Circuit-trace branches. Cold-plate depression line. -->
+  <!-- vonArgo lockup: egg with interrobang fracture, seated in the cold-plate depression line -->
+  <!-- egg -->
   <g transform="translate(20,10)">
-    <path d="M60 6 C 88 6, 112 48, 112 92 C 112 126, 89 144, 60 144 C 31 144, 8 126, 8 92 C 8 48, 32 6, 60 6 Z"
+    <path d="M60 6
+             C 88 6, 112 48, 112 92
+             C 112 126, 89 144, 60 144
+             C 31 144, 8 126, 8 92
+             C 8 48, 32 6, 60 6 Z"
           fill="none" stroke="#2e3c47" stroke-width="4"/>
-    <g stroke="#b4622d" fill="none" stroke-linecap="square" stroke-linejoin="miter">
-      <!-- bulb glass: open irregular ?-bowl -->
-      <path d="M46 62 L39 48 L47 33 L62 27 L78 34 L83 49 L76 62 L66 68" stroke-width="4.5"/>
-      <!-- thin filament legs, crossing at ~(57,73) -->
-      <path d="M46 62 L58 74 L64 81" stroke-width="2.2"/>
-      <path d="M66 68 L52 80 L47 86" stroke-width="2.2"/>
-      <!-- the ! : bold bar = bulb base -->
-      <path d="M60 82 L60 98" stroke-width="7"/>
-      <!-- circuit-trace branches -->
-      <path d="M47 33 L47 25 L40 25" stroke-width="2.5"/>
-      <path d="M78 34 L84 27" stroke-width="2.5"/>
-      <path d="M83 49 L92 49 L92 57" stroke-width="2.5"/>
-      <path d="M39 48 L30 48 L30 41" stroke-width="2.5"/>
+    <g stroke="#b4622d" fill="none" stroke-width="5" stroke-linecap="square" stroke-linejoin="miter">
+      <path d="M42 44 L50 34 L62 30 L74 34 L81 44 L82 56 L76 66 L67 73 L61 82 L60 94"/>
+      <path d="M50 34 L45 26" stroke-width="2.5"/>
+      <path d="M74 34 L80 26" stroke-width="2.5"/>
+      <path d="M82 56 L91 58" stroke-width="2.5"/>
+      <path d="M76 66 L84 72" stroke-width="2.5"/>
+      <path d="M61 82 L53 86" stroke-width="2.5"/>
+      <path d="M42 44 L33 43" stroke-width="2.5"/>
     </g>
-    <g fill="#b4622d">
-      <circle cx="64" cy="81" r="2.2"/><circle cx="47" cy="86" r="2.2"/>
-      <circle cx="40" cy="25" r="2.6"/><circle cx="84" cy="27" r="2.6"/>
-      <circle cx="92" cy="57" r="2.6"/><circle cx="30" cy="41" r="2.6"/>
-    </g>
-    <g stroke="#b4622d" fill="none" stroke-width="5"><circle cx="60" cy="115" r="7.5"/></g>
-    <g stroke="#b4622d" fill="none" stroke-width="2.2">
-      <path d="M60 107 L60 103"/><path d="M67 111 L72 107"/><path d="M53 111 L48 107"/>
-      <path d="M60 123 L60 129"/><path d="M67 119 L72 123"/>
+    <path d="M62 30 L60 94" stroke="#b4622d" stroke-width="2.5" fill="none" stroke-linecap="square"/>
+    <g stroke="#b4622d" fill="none" stroke-width="4"><circle cx="60" cy="113" r="7"/></g>
+    <g stroke="#b4622d" fill="none" stroke-width="2">
+      <path d="M60 106 L60 101"/><path d="M66 109 L71 105"/><path d="M54 109 L49 105"/>
+      <path d="M60 120 L60 126"/><path d="M66 117 L71 121"/>
     </g>
   </g>
+  <!-- cold plate: depression outline only — horizontal, 90° down, horizontal, 90° up, horizontal -->
   <path d="M8 146 L50 146 L50 160 L110 160 L110 146 L152 146"
         fill="none" stroke="#2e3c47" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/>
 </svg>
