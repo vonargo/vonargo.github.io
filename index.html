@@ -4,7 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vonargo — inference appliances from datacenter-grade hardware</title>
-<meta name="description" content="Vonargo re-engineers decommissioned datacenter GPU systems into quiet, desk-side inference appliances. In prototype — first units 2026.">
+<meta name="description" content="vonArgo re-engineers decommissioned datacenter GPU systems into quiet, desk-side inference appliances. In prototype — first units 2026.">
+<meta property="og:title" content="Vonargo — inference appliances from datacenter-grade hardware">
+<meta property="og:description" content="Reclaimed HGX-class systems, re-engineered for the desk side. Plus advisory on redesigning knowledge work with trustworthy AI. In prototype — first units 2026.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vonargo.ai/">
+<meta property="og:image" content="https://vonargo.ai/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 150'%3E%3Cpath d='M60 6 C 88 6, 112 48, 112 92 C 112 126, 89 144, 60 144 C 31 144, 8 126, 8 92 C 8 48, 32 6, 60 6 Z' fill='%232e3c47'/%3E%3Cg stroke='%23c97b45' fill='none' stroke-width='9' stroke-linecap='square'%3E%3Cpath d='M42 44 L50 34 L62 30 L74 34 L81 44 L82 56 L76 66 L67 73 L61 82 L60 94'/%3E%3C/g%3E%3Ccircle cx='60' cy='115' r='9' fill='%23c97b45'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,6 +128,7 @@ footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
 .tb{padding:0.5rem 0.7rem;border-top:1px solid var(--line-soft)}
 .tb:nth-child(-n+3){border-top:none}
 .tb + .tb{border-left:1px solid var(--line-soft)}
+.tb:nth-child(3n+1){border-left:none}
 .tb b{display:block;font-weight:400;font-size:0.6rem;color:var(--ink-faint);
   letter-spacing:0.12em;margin-bottom:0.15rem}
 .tb.name{font-family:var(--display);font-weight:800;font-stretch:115%;
@@ -142,7 +151,7 @@ footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
   :root{--frame:10px}
   main{padding-left:1.2rem;padding-right:1.2rem}
   .nameplate{padding:2.4rem 1.6rem 2.2rem}
-  .nameplate .mark{top:1.4rem;right:1.6rem;width:36px;height:28px}
+  .nameplate .mark{top:1.4rem;right:1.6rem;width:36px;height:45px}
   .pipeline{grid-template-columns:1fr}
   .titleblock{max-width:none}
 }
@@ -179,7 +188,7 @@ footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
 
   <section>
     <p class="eyebrow">What we do</p>
-    <p class="lede">The GPUs that trained the current generation of AI are leaving the datacenter. Vonargo gives that hardware a second working life — as quiet, self-contained inference machines that plug into an ordinary workstation.</p>
+    <p class="lede">The GPUs that trained the current generation of AI are leaving the datacenter. vonArgo gives that hardware a second working life — as quiet, self-contained inference machines that plug into an ordinary workstation.</p>
     <p>We source decommissioned NVIDIA HGX-class GPU systems with documented provenance, then re-engineer everything around them: power delivery, liquid cooling, and the PCIe fabric that connects four NVLinked data-center GPUs to a single slot in your machine.</p>
   </section>
 
@@ -206,7 +215,7 @@ footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
 
   <section>
     <p class="eyebrow">Advisory</p>
-    <p class="lede">Hardware is half the story. Vonargo also works directly with organizations to redesign knowledge work around trustworthy AI — so people spend less time on meaningless work and more on work that matters.</p>
+    <p class="lede">Hardware is half the story. vonArgo also works directly with organizations to redesign knowledge work around trustworthy AI — so people spend less time on meaningless work and more on work that matters.</p>
     <ul class="principles">
       <li><b>AI as infrastructure, not headcount.</b> It removes repetitive work and preserves expertise; people keep making the decisions that matter.</li>
       <li><b>One workflow at a time.</b> Find a painful process, improve it, measure it, then expand. No transformation theater.</li>
