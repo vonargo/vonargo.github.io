@@ -41,7 +41,12 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--paper);color:var(--ink);
-  font-family:var(--sans);font-size:16px;line-height:1.65}
+  font-family:var(--sans);font-size:16px;line-height:1.65;
+  background-image:
+    linear-gradient(var(--line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line) 1px, transparent 1px);
+  background-size:64px 64px;background-position:-1px -1px;background-attachment:local;
+  background-color:var(--paper)}
 
 /* ── the drawing sheet frame ─────────────────────────────── */
 .sheet{position:fixed;inset:var(--frame);border:1px solid var(--line);
@@ -199,6 +204,7 @@ footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
     <p class="eyebrow">What we do</p>
     <p class="lede">The GPUs that trained the current generation of AI are leaving the datacenter. vonArgo gives that hardware a second working life — as quiet, self-contained inference machines that plug into an ordinary workstation.</p>
     <p>We source decommissioned NVIDIA HGX-class GPU systems with documented provenance, then re-engineer everything around them: power delivery, liquid cooling, and the PCIe fabric that connects four NVLinked data-center GPUs to a single slot in your machine.</p>
+    <p>First product: <a href="/popai/">PopAI V128</a>, 128GB aggregate HBM2 across four NVLink-connected V100s. Early access open now.</p>
   </section>
 
   <section>
