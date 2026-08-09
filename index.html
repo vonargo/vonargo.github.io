@@ -58,7 +58,8 @@ html,body{margin:0;background:var(--paper);color:var(--ink);
 .tick.l{left:-1px;top:50%;height:1px;width:7px}
 .tick.r{right:-1px;top:50%;height:1px;width:7px}
 
-main{max-width:880px;margin:0 auto;padding:calc(var(--frame) + 4vw) 2rem 0}
+main{max-width:880px;margin:0 auto;padding:calc(var(--frame) + 4vw) 2rem 0;
+  background:var(--paper);border-left:1px solid var(--line);border-right:1px solid var(--line)}
 
 /* ── nameplate ───────────────────────────────────────────── */
 .nameplate{background:var(--slate);color:var(--slate-ink);
@@ -112,11 +113,12 @@ section{padding:3.4rem 0 0}
 .status .now{font-family:var(--mono);font-size:0.78rem;letter-spacing:0.08em;
   color:var(--ink);margin-bottom:0.5rem}
 .contact{margin-top:1.5rem}
-a.mail{display:inline-block;font-family:var(--mono);font-size:1rem;
+a.mail,a.btn{display:inline-block;font-family:var(--mono);font-size:1rem;
   color:var(--copper);text-decoration:none;border:1px solid var(--line);
   background:var(--panel);padding:0.7rem 1.1rem;border-radius:3px}
-a.mail:hover{border-color:var(--copper);color:var(--copper)}
-a.mail:focus-visible,a:focus-visible{outline:2px solid var(--copper);outline-offset:2px}
+a.mail:hover,a.btn:hover{border-color:var(--copper);color:var(--copper)}
+a.mail:focus-visible,a.btn:focus-visible,a:focus-visible{outline:2px solid var(--copper);outline-offset:2px}
+a.btn{font-size:0.85rem;margin-top:0.9rem}
 
 /* builder line */
 .builder{margin-top:0.9rem;font-size:0.9rem;color:var(--ink-faint)}
@@ -204,7 +206,8 @@ footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
     <p class="eyebrow">What we do</p>
     <p class="lede">The GPUs that trained the current generation of AI are leaving the datacenter. vonArgo gives that hardware a second working life — as quiet, self-contained inference machines that plug into an ordinary workstation.</p>
     <p>We source decommissioned NVIDIA HGX-class GPU systems with documented provenance, then re-engineer everything around them: power delivery, liquid cooling, and the PCIe fabric that connects four NVLinked data-center GPUs to a single slot in your machine.</p>
-    <p>First product: <a href="/popai/">PopAI V128</a>, 128GB aggregate HBM2 across four NVLink-connected V100s. Early access open now.</p>
+    <p>First product: PopAI V128, 128GB aggregate HBM2 across four NVLink-connected V100s. Early access open now.<br>
+    <a class="btn" href="/popai/">Learn more &rarr;</a></p>
   </section>
 
   <section>
