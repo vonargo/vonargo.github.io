@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vonargo — inference appliances & knowledge-work advisory</title>
-<meta name="description" content="vonArgo re-engineers decommissioned datacenter GPU systems into quiet, desk-side inference appliances. In prototype — first units 2026.">
-<meta property="og:title" content="Vonargo — inference appliances & knowledge-work advisory">
-<meta property="og:description" content="Reclaimed HGX-class systems, re-engineered for the desk side. Plus advisory on redesigning knowledge work with trustworthy AI. In prototype — first units 2026.">
+<title>vonArgo: local AI infrastructure &amp; advisory</title>
+<meta name="description" content="vonArgo builds local AI compute appliances organizations can own and operate, and advises on putting them to work. PopAI in prototype, first units 2026.">
+<meta property="og:title" content="vonArgo: local AI infrastructure &amp; advisory">
+<meta property="og:description" content="Local AI infrastructure your organization can own and operate, without building a datacenter or routing every workload through someone else's cloud.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vonargo.ai/">
 <meta property="og:image" content="https://vonargo.ai/og.png">
@@ -18,11 +18,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* Vonargo — "steel & copper". The page is set like an engineering drawing sheet:
-   hairline frame, dimension ticks, title block. Copper is spent sparingly —
+/* Vonargo, "steel & copper". The page is set like an engineering drawing sheet:
+   hairline frame, dimension ticks, title block. Copper is spent sparingly,
    it's the material the company actually trades in (cold plates, busbars). */
 :root{
-  --paper:#f6f7f5;        /* cool technical paper — not cream */
+  --paper:#f6f7f5;        /* cool technical paper, not cream */
   --panel:#fdfdfc;
   --ink:#1d2126;          /* graphite */
   --ink-soft:#4d545b;
@@ -32,7 +32,7 @@
   --slate:#2e3c47;        /* anodized nameplate */
   --slate-ink:#dfe5e8;
   --slate-faint:#8fa0ab;
-  --copper:#b4622d;       /* busbar copper — the one accent */
+  --copper:#b4622d;       /* busbar copper, the one accent */
   --copper-bright:#c97b45;
   --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -48,12 +48,12 @@ html,body{margin:0;background:var(--paper);color:var(--ink);
   background-size:64px 64px;background-position:-1px -1px;background-attachment:local;
   background-color:var(--paper)}
 
-/* ── the drawing sheet frame ─────────────────────────────── */
+/* the drawing sheet frame */
 .sheet{position:fixed;inset:var(--frame);border:1px solid var(--line);
   pointer-events:none;z-index:50}
 .sheet::before,.sheet::after{content:'';position:absolute;background:var(--line)}
-.sheet::before{top:-1px;left:50%;width:1px;height:7px}   /* top centerline tick */
-.sheet::after{bottom:-1px;left:50%;width:1px;height:7px} /* bottom tick */
+.sheet::before{top:-1px;left:50%;width:1px;height:7px}
+.sheet::after{bottom:-1px;left:50%;width:1px;height:7px}
 .tick{position:absolute;background:var(--line)}
 .tick.l{left:-1px;top:50%;height:1px;width:7px}
 .tick.r{right:-1px;top:50%;height:1px;width:7px}
@@ -61,7 +61,7 @@ html,body{margin:0;background:var(--paper);color:var(--ink);
 main{max-width:1180px;margin:0 auto;padding:calc(var(--frame) + 4vw) 2rem 0;
   background:var(--paper);border-left:1px solid var(--line);border-right:1px solid var(--line)}
 
-/* ── nameplate ───────────────────────────────────────────── */
+/* nameplate */
 .nameplate{background:var(--slate);color:var(--slate-ink);
   border-radius:3px;padding:3.2rem 3rem 2.8rem;position:relative;overflow:hidden}
 .nameplate .mark{position:absolute;top:1.8rem;right:3rem;width:52px;height:60px}
@@ -70,19 +70,19 @@ main{max-width:1180px;margin:0 auto;padding:calc(var(--frame) + 4vw) 2rem 0;
   margin:0;color:#fff}
 .wordmark .o{color:var(--copper-bright)}
 .thesis{margin:1.1rem 0 0;font-size:clamp(1.02rem,2.4vw,1.2rem);
-  color:var(--slate-ink);max-width:34em;line-height:1.55}
+  color:var(--slate-ink);max-width:36em;line-height:1.55}
 .nameplate .sub{margin:1.6rem 0 0;font-family:var(--mono);font-size:0.72rem;
   letter-spacing:0.14em;color:var(--slate-faint);text-transform:uppercase}
 .nameplate .sub b{color:var(--copper-bright);font-weight:500}
 
-/* ── body sections ───────────────────────────────────────── */
+/* body sections */
 section{padding:3.4rem 0 0}
 .eyebrow{font-family:var(--mono);font-size:0.72rem;letter-spacing:0.16em;
   text-transform:uppercase;color:var(--copper);margin:0 0 1rem}
 .lede{font-size:1.12rem;max-width:38em;margin:0;color:var(--ink)}
 .lede + p{max-width:38em;color:var(--ink-soft);margin:1rem 0 0}
 
-/* pipeline — a real sequence, so the numbers mean something */
+/* pipeline, a real sequence, so the numbers mean something */
 .pipeline{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
   background:var(--line);border:1px solid var(--line);margin-top:1.6rem}
 .step{background:var(--panel);padding:1.5rem 1.4rem 1.7rem}
@@ -100,11 +100,6 @@ section{padding:3.4rem 0 0}
 .principles li::before{content:'';position:absolute;left:0;top:0.62em;
   width:7px;height:7px;background:var(--copper);border-radius:1px}
 .principles b{color:var(--ink);font-weight:600}
-.grounded{margin:1.3rem 0 0;max-width:40em;font-size:0.9rem;
-  color:var(--ink-faint);font-style:italic}
-.grounded a{color:var(--ink-soft);text-decoration:underline;
-  text-decoration-color:var(--line);text-underline-offset:3px}
-.grounded a:hover{color:var(--copper);text-decoration-color:var(--copper)}
 
 /* status + contact */
 .status{border-left:2px solid var(--copper);padding:0.2rem 0 0.2rem 1.4rem;
@@ -118,7 +113,19 @@ a.mail,a.btn{display:inline-block;font-family:var(--mono);font-size:1rem;
   background:var(--panel);padding:0.7rem 1.1rem;border-radius:3px}
 a.mail:hover,a.btn:hover{border-color:var(--copper);color:var(--copper)}
 a.mail:focus-visible,a.btn:focus-visible,a:focus-visible{outline:2px solid var(--copper);outline-offset:2px}
-a.btn{font-size:0.85rem;margin-top:0.9rem}
+a.btn{font-size:0.85rem}
+a.btn.solid{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+a.btn.solid:hover{background:var(--copper);border-color:var(--copper);color:#fff}
+
+/* PopAI intro card, business-forward product placement */
+.popai-card{margin-top:1.8rem;border:1px solid var(--line);background:var(--panel);
+  padding:1.8rem 2rem;display:grid;grid-template-columns:1fr auto;gap:1.6rem;align-items:center}
+.popai-card .label{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--copper);margin:0 0 .5rem}
+.popai-card h3{font-family:var(--display);font-weight:800;font-stretch:112%;
+  font-size:1.5rem;margin:0 0 .5rem;letter-spacing:-.01em}
+.popai-card p{margin:0;color:var(--ink-soft);font-size:.95rem;max-width:42em}
+@media (max-width:640px){.popai-card{grid-template-columns:1fr}}
 
 /* builder line */
 .builder{margin-top:0.9rem;font-size:0.9rem;color:var(--ink-faint)}
@@ -126,7 +133,7 @@ a.btn{font-size:0.85rem;margin-top:0.9rem}
   text-decoration-color:var(--line);text-underline-offset:3px}
 .builder a:hover{color:var(--copper);text-decoration-color:var(--copper)}
 
-/* ── title block footer ──────────────────────────────────── */
+/* title block footer */
 footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
 .titleblock{margin-left:auto;max-width:430px;border:1px solid var(--line);
   background:var(--panel);display:grid;
@@ -149,7 +156,7 @@ footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
   border-bottom:1px solid var(--line)}
 .canon a:hover{color:var(--copper);border-color:var(--copper)}
 
-/* ── motion: one quiet reveal ────────────────────────────── */
+/* motion: one quiet reveal */
 @media (prefers-reduced-motion:no-preference){
   .nameplate,section,footer{animation:rise 0.6s cubic-bezier(.2,.6,.2,1) both}
   section:nth-of-type(1){animation-delay:0.08s}
@@ -159,7 +166,7 @@ footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
   @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 }
 
-/* ── responsive ──────────────────────────────────────────── */
+/* responsive */
 @media (max-width:720px){
   :root{--frame:10px}
   main{padding-left:1.2rem;padding-right:1.2rem}
@@ -198,33 +205,50 @@ footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
       <path d="M8 146 L50 146 L50 160 L110 160 L110 146 L152 146" fill="none" stroke="#8fa0ab" stroke-width="4" stroke-linecap="square" stroke-linejoin="miter"/>
     </svg>
     <h1 class="wordmark">V<span class="o">O</span>NARGO</h1>
-    <p class="thesis">Turnkey inference appliances, from datacenter-grade GPU hardware.<br>Advisory to put trustworthy AI to work, one workflow at a time.</p>
-    <p class="sub">Reclaimed HGX-class systems, re-engineered for the desk side &nbsp;·&nbsp; bespoke workflows, re-engineered for your business &nbsp;·&nbsp; <b>advisory open now, appliances in prototype 2026</b></p>
+    <p class="thesis">No datacenter to build. No cloud dependency.<br>For every workload.</p>
+    <p class="sub">Local AI appliances, built &amp; supported &nbsp;&middot;&nbsp; practical advisory to put them to work &nbsp;&middot;&nbsp; <b>PopAI in prototype, first units 2026 &middot; advisory open now</b></p>
   </header>
 
   <section>
     <p class="eyebrow">What we do</p>
-    <p class="lede">The GPUs that trained the current generation of AI are leaving the datacenter. vonArgo gives that hardware a second working life — as quiet, self-contained inference machines that plug into an ordinary workstation.</p>
-    <p>We source decommissioned NVIDIA HGX-class GPU systems with documented provenance, then re-engineer everything around them: power delivery, liquid cooling, and the PCIe fabric that connects four NVLinked data-center GPUs to a single slot in your machine.</p>
-    <p>First product: PopAI V128, 128GB aggregate HBM2 across four NVLink-connected V100s. Early access open now.<br>
-    <a class="btn" href="/popai/">Learn more &rarr;</a></p>
+    <p class="lede">vonArgo does two things: we build local AI compute appliances, and we advise organizations on applying AI to real workflows. The two often belong together: hardware alone doesn't change how a team works, and advice without capacity doesn't run anything.</p>
+    <div class="popai-card">
+      <div>
+        <p class="label">Product line</p>
+        <h3>PopAI</h3>
+        <p>Local AI compute appliances: real GPU capacity your organization owns outright, sized to actual workloads instead of a hyperscaler's minimum commitment. The first model, PopAI V128, attaches to a workstation you already have.</p>
+      </div>
+      <a class="btn solid" href="/popai/">See PopAI V128 &rarr;</a>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">Advisory</p>
+    <p class="lede">Hardware is half the story. vonArgo also works directly with organizations to redesign knowledge work around trustworthy AI, so people spend less time on meaningless work and more on work that matters.</p>
+    <ul class="principles">
+      <li><b>AI as infrastructure, not headcount.</b> It removes repetitive work and preserves expertise; people keep making the decisions that matter.</li>
+      <li><b>One workflow at a time.</b> Find a painful process, improve it, measure it, then expand. No transformation theater.</li>
+      <li><b>Measured in capacity, not cuts.</b> Success looks like more output, fewer mistakes, and less burnout, not a smaller team.</li>
+    </ul>
+    <a class="btn solid" style="margin-top:1.4rem" href="mailto:will@vonargo.ai?subject=Discuss%20an%20AI%20workflow">Discuss an AI workflow &rarr;</a>
   </section>
 
   <section>
     <p class="eyebrow">How a unit is built</p>
+    <p class="lede" style="font-size:1rem">The engineering behind PopAI, for anyone evaluating whether this is real hardware or a rendering.</p>
     <div class="pipeline">
       <div class="step">
-        <span class="n">1 — SOURCE</span>
-        <h3>Verified salvage</h3>
+        <span class="n">1 . SOURCE</span>
+        <h3>Qualified datacenter hardware</h3>
         <p>HGX baseboards and SXM modules from US datacenter decommissions. Documented origin, inspected on arrival.</p>
       </div>
       <div class="step">
-        <span class="n">2 — INTEGRATE</span>
+        <span class="n">2 . INTEGRATE</span>
         <h3>Re-engineering</h3>
         <p>54&thinsp;V power distribution, copper cold plates and a closed liquid loop, PCIe Gen4 switch fabric to the host.</p>
       </div>
       <div class="step">
-        <span class="n">3 — DELIVER</span>
+        <span class="n">3 . DELIVER</span>
         <h3>Burn-in &amp; documentation</h3>
         <p>Every unit will ship after extended load testing, with its own build record and burn-in report.</p>
       </div>
@@ -232,36 +256,25 @@ footer{margin:4.5rem 0 0;padding-bottom:calc(var(--frame) + 2rem)}
   </section>
 
   <section>
-    <p class="eyebrow">Advisory</p>
-    <p class="lede">Hardware is half the story. vonArgo also works directly with organizations to redesign knowledge work around trustworthy AI — so people spend less time on meaningless work and more on work that matters.</p>
-    <ul class="principles">
-      <li><b>AI as infrastructure, not headcount.</b> It removes repetitive work and preserves expertise; people keep making the decisions that matter.</li>
-      <li><b>One workflow at a time.</b> Find a painful process, improve it, measure it, then expand. No transformation theater.</li>
-      <li><b>Measured in capacity, not cuts.</b> Success looks like more output, fewer mistakes, and less burnout — not a smaller team.</li>
-    </ul>
-    <p class="grounded">Grounded in working systems, not slide decks — we design, build, and run our own local-AI stack end to end. Field notes from that stack: <a href="https://parlaiment.bearblog.dev">ParlAIment</a>.</p>
-  </section>
-
-  <section>
     <p class="eyebrow">Status</p>
     <div class="status">
-      <p class="now">PROTOTYPE IN PROGRESS · FIRST UNITS 2026</p>
-      <p>The appliance line is in active development. Advisory engagements are open now. If you're a supplier of SXM-generation hardware, an organization rethinking knowledge work, or you run serious local inference — get in touch.</p>
+      <p class="now">PROTOTYPE IN PROGRESS &middot; FIRST UNITS 2026</p>
+      <p>The appliance line is in active development. Advisory engagements are open now. If you're evaluating local AI infrastructure, rethinking knowledge work, or you run serious local inference, get in touch.</p>
     </div>
     <p class="contact"><a class="mail" href="mailto:will@vonargo.ai">will@vonargo.ai</a></p>
-    <p class="builder">Built by <a href="https://github.com/vonargo" rel="me">vonargo</a> — open-source work on <a href="https://github.com/vonargo">GitHub</a> and <a href="https://huggingface.co/vonargo" rel="me">Hugging&nbsp;Face</a>.</p>
+    <p class="builder">Built by <a href="https://github.com/vonargo" rel="me">vonargo</a>, open-source work on <a href="https://github.com/vonargo">GitHub</a> and <a href="https://huggingface.co/vonargo" rel="me">Hugging&nbsp;Face</a>.</p>
   </section>
 
   <footer>
     <div class="titleblock" role="contentinfo">
       <div class="tb name">V<span>O</span>NARGO</div>
       <div class="tb"><b>DWG NO</b>VNRG-001</div>
-      <div class="tb"><b>REV</b>A</div>
+      <div class="tb"><b>REV</b>B</div>
       <div class="tb"><b>TITLE</b>COMPANY SHEET</div>
       <div class="tb"><b>SHEET</b>1 OF 1</div>
       <div class="tb"><b>DATE</b>2026</div>
     </div>
-    <p class="canon">Official channels — <a href="https://vonargo.ai">vonargo.ai</a> &nbsp;·&nbsp; <a href="https://github.com/vonargo">github.com/vonargo</a>. Anything else using this name isn&rsquo;t us.</p>
+    <p class="canon">Official channels &middot; <a href="https://vonargo.ai">vonargo.ai</a> &nbsp;&middot;&nbsp; <a href="https://github.com/vonargo">github.com/vonargo</a>. Anything else using this name isn&rsquo;t us.</p>
   </footer>
 </main>
 
