@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192" role="img" aria-label="Private AI monolith mark"><title>Private AI monolith</title><defs>
+    <linearGradient id="warm-metal" x1="0%" y1="0%" x2="82%" y2="100%"><stop offset="0" stop-color="#F2D7A0"/><stop offset=".48" stop-color="#D4AA63"/><stop offset="1" stop-color="#A07942"/></linearGradient>
+    </defs><polygon points="51.120,47.880 72.540,31.160 72.540,146.680 51.120,163.400" fill="url(#warm-metal)"/>
+<polygon points="84.780,32.680 107.220,19.000 107.220,169.480 84.780,154.280" fill="url(#warm-metal)"/>
+<polygon points="119.460,52.440 140.880,35.720 140.880,145.160 119.460,161.880" fill="url(#warm-metal)"/>
+<path d="M109.770,37.240 V149.720" stroke="#F0CD91" stroke-width="1.84" opacity=".7"/></svg>
